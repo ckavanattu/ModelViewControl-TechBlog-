@@ -1,0 +1,18 @@
+<h2 class="welcome">--Welcome--</h2>
+
+<button type="submit" class="addButton"><a class="link" href="/dashboard/add">Add New Post</a></button>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> post-info post}}
+      <button class="editButton"><a href="/dashboard/edit/{{post.id}}" class="edit-link">edit post</a></button>
+    {{/each}}
+
+</section>
+{{/if}}
+
+
+
+<script src="/javascript/add-post.js"></script>
